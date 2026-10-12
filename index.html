@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ReactZero</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+
+    <script>
+      const e = React.createElement;
+
+      ReactDOM.render(
+        e(
+          "table",
+          { border: "1", style: { borderCollapse: "collapse", width: "100%" } },
+          e(
+            "thead",
+            null,
+            e(
+              "tr",
+              null,
+              e("th", { style: { padding: "8px" } }, "ID"),
+              e("th", { style: { padding: "8px" } }, "Nome"),
+              e("th", { style: { padding: "8px" } }, "Cargo"),
+            ),
+          ),
+          e(
+            "tbody",
+            null,
+            e(
+              "tr",
+              null,
+              e("td", { style: { padding: "8px" } }, "1"),
+              e("td", { style: { padding: "8px" } }, "Ana Silva"),
+              e("td", { style: { padding: "8px" } }, "Dev"),
+            ),
+            e(
+              "tr",
+              null,
+              e("td", { style: { padding: "8px" } }, "2"),
+              e("td", { style: { padding: "8px" } }, "Carlos Souza"),
+              e("td", { style: { padding: "8px" } }, "Designer"),
+            ),
+          ),
+        ),
+        document.getElementById("app"));
+    </script>
+  </body>
+</html>
